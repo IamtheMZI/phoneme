@@ -1,0 +1,1 @@
+function [final_weight] = find_weight(weight,output)  inc = 1;  while inc <=100    if (inc <= 50)      ln = 0.6;      weight = update_weight_once(weight,output,ln);    elseif (inc >50 && inc < 76)      ln = 0.5;      weight = update_weight_once(weight,output,ln);    else      ln = 0.1;      weight = update_weight_once(weight,output,ln);    end  endend
