@@ -17,10 +17,10 @@ function [res] = phoneme_test(line_id)   % Function declaration
 
   % while (dat(1) ~= ".")  % Checks for the end of chunk
   counter = 0;
-  while(dat ~= -1 && counter < 3001); % Reads till the end
+  while(dat ~= -1 && counter < 3002); % Reads till the end
     if(dat(1) == '"');
-      disp("Iteration begin for ");
-      disp(dat);
+      %disp("Iteration begin for ");
+      %disp(dat);
       dat = dat(2:(length(dat)-1));
       input = importdata(dat);
       counter = counter + 1;

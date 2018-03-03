@@ -13,7 +13,6 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-## -*- texinfo -*- 
 ## @deftypefn {} {@var{retval} =} phoneme_run (@var{input1}, @var{input2})
 ##
 ## @seealso{}
@@ -28,6 +27,7 @@ function [retval] = phoneme_run (iter)
   count = 0;
   while ( count < iter)
       retval = pararrayfun(nproc-1,@phoneme_test,v_x);
+      dlmwrite("weight.mfc", retval, 'delimiter', '\t', 'precision', '%3.6f') 
       count = count + 1;
   end
 endfunction
